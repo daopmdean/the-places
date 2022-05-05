@@ -8,7 +8,7 @@ class DbRepo {
       path.join(dbPath, 'places.db'),
       onCreate: (db, v) {
         return db.execute(
-            'CREATE TABLE user_places(id TEXT PRIMARY KEY, title TEXT, image TEXT)');
+            'CREATE TABLE user_places(id TEXT PRIMARY KEY, title TEXT, image TEXT, loc_lat REAL, loc_long REAL, address TEXT)');
       },
       version: 1,
     );
