@@ -1,7 +1,6 @@
-import 'dart:io';
-
-final GOOGLE_API_KEY = Platform.environment['GOOGLE_API_KEY'];
+const GOOGLE_API_KEY = 'AIzaSyAzM20vwcknz5eEQtvr1rOQkYTEGiV2v2E';
 // String.fromEnvironment('GOOGLE_API_KEY');
+// Platform.environment['GOOGLE_API_KEY'];
 
 class LocationHelper {
   static String getCurrentLocation({
