@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:the_places/provider/great_places.dart';
 import 'package:the_places/widget/image_input.dart';
+import 'package:the_places/widget/location_input.dart';
 
 class AddPlaceScreen extends StatefulWidget {
   static const routeName = '/add-place';
@@ -50,10 +51,12 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                       decoration: const InputDecoration(labelText: 'Title'),
                       controller: _titleController,
                     ),
-                    const SizedBox(
-                      height: 10,
+                    const SizedBox(height: 10),
+                    ImageInput(
+                      onSelected: _selectImage,
                     ),
-                    ImageInput(onSelected: _selectImage),
+                    const SizedBox(height: 10),
+                    LocationInput(),
                   ],
                 ),
               ),
